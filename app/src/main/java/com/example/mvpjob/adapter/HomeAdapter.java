@@ -16,10 +16,10 @@ import com.example.mvpjob.bean.HomeBean;
 import java.util.ArrayList;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
-    private ArrayList<HomeBean.DataDTO> list;
+    private ArrayList<HomeBean.NewsDTO> list;
     private Context context;
 
-    public HomeAdapter(ArrayList<HomeBean.DataDTO> list, Context context) {
+    public HomeAdapter(ArrayList<HomeBean.NewsDTO> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -33,7 +33,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull HomeHolder holder, int position) {
-        Glide.with(context).load(list.get(position).getPic()).load(holder.iv);
+        Glide.with(context).load(list.get(position).getImageUrl()).into(holder.iv);
     }
 
     @Override

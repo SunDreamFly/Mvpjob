@@ -16,11 +16,11 @@ public interface ServerApi {
     @GET
     Observable<ResponseBody> get(@Url String url);
 
-    @POST
+   /* @POST
     @FormUrlEncoded
     Observable<ResponseBody> post(@Url String url);
 
     @POST
     @FormUrlEncoded
-    Observable<ResponseBody> post(@Url String url, @FieldMap HashMap<String, String> map);
+    Observable<ResponseBody> post(@Url String url, @FieldMap HashMap<String, String> map);*/
 }
